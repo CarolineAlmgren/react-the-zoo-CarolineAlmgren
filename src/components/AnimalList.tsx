@@ -22,11 +22,11 @@ const AnimalList = () => {
 
     return (
         <div>
-            <ul>
+            <ul className='animal-list'>
                 {animals.map(animal => (
                     <li key={animal.id}>
                         <h3>{animal.name}</h3>
-                        <img src={animal.imageUrl} alt={animal.name} />
+                        <img className="animal-image" src={animal.imageUrl} alt={animal.name} />
                         <button key={animal.isFed ? 'Yes' : 'No'}> Mata </button>
                         {animal.isFed && (
                             <p>Last Fed: {animal.lastFed?.toLocaleString()}</p>
