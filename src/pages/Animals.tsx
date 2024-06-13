@@ -1,5 +1,9 @@
-export const Animals = () => {
+import AnimalList from "../components/AnimalList";
 
-    return 
-    <></>
-}
+export const Animals = () => {
+  return(
+  <>
+    <h2>Djuren</h2>
+    <AnimalList/>
+  </>)
+};

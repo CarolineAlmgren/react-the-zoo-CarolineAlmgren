@@ -1,8 +1,9 @@
 export interface Animal {
     id: number;
     name: string;
-    description: string;
+    yearOfBirth: number;
+    longDescription: string;
     imageUrl: string;
-    fed: boolean;
-    lastFed: Date;
+    isFed: boolean;
+    lastFed: Date | null;
 }

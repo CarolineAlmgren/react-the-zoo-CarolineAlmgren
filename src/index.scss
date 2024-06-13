@@ -13,5 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-
+img {
+  max-width: 100%; // Begränsa maximal bredd till 100% av dess container
+  height: auto;    // Automatisk höjd för att bevara bildens proportioner
+}
