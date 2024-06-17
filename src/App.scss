@@ -1,4 +1,7 @@
-
+body {
+  margin: 0;
+  padding: 0;
+}
   #home-section {
     background-image: url('./img/TheZooBackground.png');
     background-size: cover; 
@@ -10,22 +13,58 @@
   }
 
   #animals-section {
-    background-color:antiquewhite;    
+    background-color:lightyellow;
+    width: 100%; 
+    height: 100%;    
 
     .animal-list{
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 10px;
       padding: 10px;
+       li{
+        background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+       }
+    }
+
+    .animal-image {
+    width: 100%;
+
+  
     }
   
   }
- 
-  .animal-image {
-    width: 200px; /* Anpassa storleken efter behov */
-  height: auto;
-  }
 
+  #animalDetail-section{
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: 100%;   
+  #animalDetail-box {
+      background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 50px;
+    margin: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .animal-image{
+      width: 300px;
+      height: auto;
+    }
+
+    }
+    
+  }
+ 
   
   ul {
     display: flex;
@@ -48,4 +87,18 @@
   
       }
     }
+}
+
+button {
+  cursor: pointer;
+   background-color: lightyellow;
+   border: black solid 1px;
+   border-radius: 10px;
+   padding: 5px;
+}
+
+nav {
+  position: fixed;
+  background-color: transparent;
+
 }

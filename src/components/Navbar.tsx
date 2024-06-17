@@ -5,12 +5,13 @@ export const Navbar = () => {
     <>
       <nav>
         <ul>
-          <li>
+        <li>
             <NavLink to={"/"}>Hem</NavLink>
           </li>
           <li>
             <NavLink to={"/animals"}>Besök djuren</NavLink>
           </li>
+          
         </ul>
       </nav>
     </>

@@ -1,5 +1,11 @@
-export const Animal = () => {
+import AnimalDetail from "../components/AnimalDetail";
+import { Navbar } from "../components/Navbar";
 
-    return 
-    <></>
-}
+export const Animal = () => {
+  return (
+    <>
+      <Navbar />
+      <AnimalDetail />
+    </>
+  );
+};

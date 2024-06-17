@@ -2,9 +2,11 @@
 import { useEffect, useState } from 'react';
 import { fetchAnimals } from "./../services/animalService"
 import { Animal } from '../models/Animal';
+import { useNavigate } from 'react-router-dom';
 
 const AnimalList = () => {
     const [animals, setAnimals] = useState<Animal[]>([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const loadAnimals = async () => {
@@ -20,17 +22,21 @@ const AnimalList = () => {
         loadAnimals();
     }, []);
 
+  
+    const handleAnimalClick = (id: number) => {
+        navigate(`/animal/${id}`);
+    };
+
     return (
-        <div>
+        <div id="animals-section">
             <ul className='animal-list'>
                 {animals.map(animal => (
-                    <li key={animal.id}>
-                        <h3>{animal.name}</h3>
+                    <li key={animal.id} className="animal-item">
+                        <p>{animal.name}</p>
                         <img className="animal-image" src={animal.imageUrl} alt={animal.name} />
-                        <button key={animal.isFed ? 'Yes' : 'No'}> Mata </button>
-                        {animal.isFed && (
-                            <p>Last Fed: {animal.lastFed?.toLocaleString()}</p>
-                        )}
+                        <p>{animal.shortDescription}</p>
+                        <button onClick={() => handleAnimalClick(animal.id)} >Mer info</button>
+                        <p>Senast matad: </p>
                     </li>
                 ))}
             </ul>
