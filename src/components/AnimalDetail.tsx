@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchAnimals } from '../services/animalService';
 import { Animal } from '../models/Animal';
 
+
 const AnimalDetail = () => {
     const { id } = useParams<{ id: string }>();
     const [animal, setAnimal] = useState<Animal | undefined>();

@@ -24,7 +24,7 @@ const AnimalList = () => {
 
   
     const handleAnimalClick = (id: number) => {
-        navigate(`/animal/${id}`);
+        navigate(`/animal/${id}`, { state: { animals } });
     };
 
     return (
@@ -36,7 +36,6 @@ const AnimalList = () => {
                         <img className="animal-image" src={animal.imageUrl} alt={animal.name} />
                         <p>{animal.shortDescription}</p>
                         <button onClick={() => handleAnimalClick(animal.id)} >Mer info</button>
-                        <p>Senast matad: </p>
                     </li>
                 ))}
             </ul>
