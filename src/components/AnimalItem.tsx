@@ -18,6 +18,9 @@ interface AnimalItemProps {
             className="animal-image" 
             src={animal.imageUrl} 
             alt={animal.name} 
+            onError={(e)=> {
+                (e.target as HTMLImageElement).src="/emptypicture.jpg";
+            }}
         />
         <p>{animal.shortDescription}</p>
         <button onClick={handleAnimalClick}>Mer info</button>

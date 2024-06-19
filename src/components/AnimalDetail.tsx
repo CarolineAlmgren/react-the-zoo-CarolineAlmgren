@@ -51,7 +51,9 @@ const AnimalDetail = () => {
 
             <div id='animalDetail-box'>
             <p>{animal.name}</p>
-            <img className='animal-image' src={animal.imageUrl} alt={animal.name} />
+            <img className='animal-image' src={animal.imageUrl} alt={animal.name}  onError={(e)=> {
+                (e.target as HTMLImageElement).src="/emptypicture.jpg";
+            }} />
             <p>{animal.longDescription}</p>
             <button
                 onClick={() => handleFeedAnimal(animal.id)}
