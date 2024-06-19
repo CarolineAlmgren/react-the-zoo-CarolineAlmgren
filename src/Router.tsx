@@ -4,6 +4,7 @@ import { Animals } from "./pages/Animals";
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { Animal } from "./pages/Animal";
+import { NotFound } from "./pages/NotFound";
 
 
 export const router = createBrowserRouter([
@@ -24,6 +25,6 @@ export const router = createBrowserRouter([
         element: <Animal/>
       },
     ],
-   
+   errorElement: <NotFound />
   },
 ]);

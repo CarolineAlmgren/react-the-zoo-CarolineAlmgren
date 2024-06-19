@@ -12,7 +12,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -126,3 +125,10 @@ button {
    padding: 5px;
 }
 
+#error-container{
+
+  #error-image{
+    display: block;
+    width: 30%;
+  }
+}

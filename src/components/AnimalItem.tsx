@@ -23,7 +23,7 @@ interface AnimalItemProps {
             }}
         />
         <p>{animal.shortDescription}</p>
-        <button onClick={handleAnimalClick}>Mer info</button>
+        <button onClick={handleAnimalClick}>Läs mer</button>
     </li>
 );
 };
